@@ -4,8 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>카카오뱅크 모작</title>
+        <!-- 제이쿼리 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- 폰트어썸 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
+        <!-- 내부링크 -->
         <link rel="stylesheet" href="../style.css" />
         <script src="../script.js" defer></script>
     </head>
@@ -51,8 +55,8 @@
                                                 <li><a href="#" class="block">주주사 소개</a></li>
                                                 <li><a href="#" class="block">오시는 길</a></li>
                                                 <li><a href="#" class="block">제휴문의</a></li>
-                                                <li><a href="#" class="block">금융기술연구소</a></li>
-                                                <li><a href="#" class="block">카카오뱅크 인증서</a></li>
+                                                <li><a href="#" class="block" target="_blank">금융기술연구소</a></li>
+                                                <li><a href="#" class="block" target="_blank">카카오뱅크 인증서</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -69,7 +73,7 @@
                                                 <li><a href="#" class="block">입찰공고</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#" class="block">인재영입</a></li>
+                                        <li><a href="#" class="block" target="_blank">인재영입</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -121,7 +125,7 @@
                                             <a href="#" class="block">IR일정</a>
                                             <ul>
                                                 <li><a href="#" class="block">IR행사</a></li>
-                                                <li><a href="#" class="block">IR미팅예약</a></li>
+                                                <li><a href="#" class="block" target="_blank">IR미팅예약</a></li>
                                                 <li><a href="#" class="block">주주총회</a></li>
                                             </ul>
                                         </li>
@@ -300,19 +304,19 @@
                 <div class="dropdown flex-as-c">
                     <button class="dropBtn">관련사이트</button>
 
-                    <div class="dropdown_content is_active">
+                    <div class="dropdown_content">
                         <ul>
                             <li>
-                                <a href="#"><span>카카오뱅크AD</span></a>
+                                <a href="#" target="_blank"><span>카카오뱅크AD</span></a>
                             </li>
                             <li>
-                                <a href="#"><span>카카오뱅크 인증서</span></a>
+                                <a href="#" target="_blank"><span>카카오뱅크 인증서</span></a>
                             </li>
                             <li>
-                                <a href="#"><span>금융기술연구소</span></a>
+                                <a href="#" target="_blank"><span>금융기술연구소</span></a>
                             </li>
                             <li>
-                                <a href="#"><span>기술블로그</span></a>
+                                <a href="#" target="_blank"><span>기술블로그</span></a>
                             </li>
                         </ul>
                     </div>
@@ -447,6 +451,24 @@
                 font-size: 17px;
                 text-align: center;
             }
+
+            header .menu-box .menu_box-sec_menu ul li a[target="_blank"]::after {
+                content: "";
+                margin-left: 8px;
+                width: 14px;
+                height: 14px;
+                display: inline-block;
+                background: url(../imgs/svg_line_outlink.svg);
+                background-size: 14px 14px;
+                vertical-align: middle;
+                margin-top: -4px;
+            }
+            header .menu-box .menu_box-sec_menu > ul > li > a[target="_blank"]::after {
+                content: "";
+                width: 18px;
+                height: 18px;
+                background-size: 18px 18px;
+            }
             header .menu-box .menu_box-sec_menu > ul ul > li > a {
                 display: block;
                 margin-bottom: 24px;
@@ -457,7 +479,7 @@
             /* ------- 2nd menu end ------- */
             /* ------- menu end ------- */
             /* ------- dropdown start ------- */
-            header .dropdown{
+            header .dropdown {
                 position: relative;
             }
 
@@ -488,40 +510,70 @@
                 background-size: 12px 12px;
                 transition: all 0.2s;
             }
-            header .dropdown .dropBtn:hover::after {
+            header .dropdown .dropBtn.is_active::after {
                 transform: rotate(-180deg);
             }
 
-            header .dropdown .dropdown_content{
-                position:absolute;
-                left:50%;
-                top:100%;
+            header .dropdown .dropdown_content {
+                position: absolute;
+                left: 50%;
+                top: 120%;
                 transform: translateX(-50%);
                 border-radius: 6px;
-                background-color:#fff;
-                margin-top:32px;
-                width:240px;
-                box-shadow: 0 4px 12px 0 rgba(0,0,0,.12);
+                background-color: #fff;
+                margin-top: 32px;
+                width: 240px;
+                box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
                 line-height: 48px;
                 opacity: 0;
                 visibility: hidden;
-                transition:all .3s;
+                transition: all 0.3s;
             }
-            header .dropdown .dropdown_content.is_active{
+            header .dropdown .dropdown_content.is_active {
                 opacity: 1;
                 visibility: visible;
+                top: 100%;
             }
-            header .dropdown .dropdown_content a{
-                font-size:13px;
+            header .dropdown .dropdown_content a {
+                font-size: 13px;
                 display: block;
                 padding: 0 24px;
                 box-sizing: border-box;
             }
-            header .dropdown .dropdown_content a:hover{
+            header .dropdown .dropdown_content a:hover {
                 text-decoration: underline;
+                background-color: #f7f7f7;
+            }
+
+            header .dropdown .dropdown_content a[target="_blank"]::after {
+                content: "";
+                margin-left: 6px;
+                margin-top: -2px;
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                background: url(../imgs/svg_line_outlink.svg);
+                background-size: 12px 12px;
+                vertical-align: middle;
             }
             /* ------- dropdown end ------- */
             /* ------------ header end ------------*/
         </style>
+        <script>
+            $('.dropBtn').click(function(){
+                $('.dropdown_content').toggleClass('is_active');
+                $('.dropBtn').toggleClass('is_active');
+
+                return false;
+            });
+            $('body').click(function(){
+                if($('.dropdown_content').hasClass('is_active')>0){
+                    $('.dropdown_content').removeClass('is_active');
+                }
+                if($('.dropBtn').hasClass('is_active')>0){
+                    $('.dropBtn').removeClass('is_active');
+                }
+            })
+        </script>
     </body>
 </html>
