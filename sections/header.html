@@ -299,6 +299,23 @@
                 <!-- 이미지 버전 -->
                 <div class="dropdown flex-as-c">
                     <button class="dropBtn">관련사이트</button>
+
+                    <div class="dropdown_content dropdown_content.is_active">
+                        <ul>
+                            <li>
+                                <a href="#"><span>카카오뱅크AD</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>카카오뱅크 인증서</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>금융기술연구소</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>기술블로그</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
@@ -390,6 +407,9 @@
                 padding: 0 12px;
                 position: relative;
             }
+            header .menu-box a:hover {
+                text-decoration: underline;
+            }
             header .menu-box > ul > li > a:hover::after {
                 content: "";
                 position: absolute;
@@ -403,38 +423,44 @@
             /* ------- 2nd menu start ------- */
             header .menu-box > ul > li > div {
                 width: 100%;
-                box-shadow: 0 4px 12px 0 rgba(0,0,0,.12);
+                box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
                 background-color: #fff;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 display: none;
                 padding: 60px 0 36px;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
             }
             header .menu-box > ul > li:hover > div {
                 display: block;
             }
-            header .menu-box .menu_box-sec_menu>ul>li{
-                width:calc(100%/6);
+            header .menu-box .menu_box-sec_menu > ul > li {
+                width: calc(100% / 6);
             }
-            header .menu-box>ul>li:first-child .menu_box-sec_menu >ul>li{
-                width:calc(100%/4);
+            header .menu-box > ul > li:first-child .menu_box-sec_menu > ul > li {
+                width: calc(100% / 4);
             }
-            header .menu-box .menu_box-sec_menu>ul>li>a{
-                display:block;
-                margin-bottom:20px;
-                font-size:17px;
+            header .menu-box .menu_box-sec_menu > ul > li > a {
+                display: block;
+                margin-bottom: 20px;
+                font-size: 17px;
                 text-align: center;
             }
-            header .menu-box .menu_box-sec_menu>ul ul>li>a{
-                display:block;
-                margin-bottom:24px;
-                font-size:13px;
-                color:#444;
+            header .menu-box .menu_box-sec_menu > ul ul > li > a {
+                display: block;
+                margin-bottom: 24px;
+                font-size: 13px;
+                color: #444;
                 text-align: center;
             }
             /* ------- 2nd menu end ------- */
             /* ------- menu end ------- */
+            /* ------- dropdown start ------- */
+            header .dropdown{
+                position: relative;
+            }
+
             /* dropdown menu 아이콘 버전*/
             header .dropdown .dropBtn {
                 background: rgba(244, 244, 244, 0.8);
@@ -465,6 +491,36 @@
             header .dropdown .dropBtn:hover::after {
                 transform: rotate(-180deg);
             }
+
+            header .dropdown .dropdown_content{
+                position:absolute;
+                left:50%;
+                top:100%;
+                transform: translateX(-50%);
+                border-radius: 6px;
+                background-color:#fff;
+                margin-top:32px;
+                width:240px;
+                box-shadow: 0 4px 12px 0 rgba(0,0,0,.12);
+                line-height: 48px;
+                opacity: 0;
+                visibility: hidden;
+                transition:all .3s;
+            }
+            header .dropdown .dropdown_content.is_active{
+                opacity: 1;
+                visibility: visible;
+            }
+            header .dropdown .dropdown_content a{
+                font-size:13px;
+                display: block;
+                padding: 0 24px;
+                box-sizing: border-box;
+            }
+            header .dropdown .dropdown_content a:hover{
+                text-decoration: underline;
+            }
+            /* ------- dropdown end ------- */
             /* ------------ header end ------------*/
         </style>
     </body>
