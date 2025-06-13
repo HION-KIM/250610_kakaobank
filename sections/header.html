@@ -620,16 +620,25 @@
             $('.dropdown_content').toggleClass('is_active');
             $('.dropBtn').toggleClass('is_active');
 
-            return false;
+            // return false;
         });
-        $('body').click(function () {
-            if ($('.dropdown_content').hasClass('is_active') > 0) {
+        // 내가 한거
+        // $('body').click(function () {
+        //     if ($('.dropdown_content').hasClass('is_active') > 0) {
+        //         $('.dropdown_content').removeClass('is_active');
+        //     }
+        //     if ($('.dropBtn').hasClass('is_active') > 0) {
+        //         $('.dropBtn').removeClass('is_active');
+        //     }
+        // })
+        // 쎔이 한거
+        // 화면 전체를 찾을 때는 window 사용
+        $(window).click(function(event){
+            if(!$(event.target).closest('.dropBtn').length){
                 $('.dropdown_content').removeClass('is_active');
+                $('.dropBtn').removeClass('is_active')
             }
-            if ($('.dropBtn').hasClass('is_active') > 0) {
-                $('.dropBtn').removeClass('is_active');
-            }
-        })
+        });
     </script>
 </body>
 
