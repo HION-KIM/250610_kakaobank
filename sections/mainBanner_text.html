@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="main_banner con-min-width border-red">
+  <div class="main_banner con-min-width">
     <div class="text_box con">
       <h3>이미 모두의 은행<br>지금은 카카오뱅크</h3>
       <p>한 사람, 한 사람을 위해 시작한 은행이<br>
@@ -26,8 +26,8 @@
         당신의 모든 일이 바뀌고 있습니다.</p>
 
       <div class="btns flex">
-        <div><a href="#">Google Play</a></div>
-        <div><a href="#">App Store</a></div>
+        <div><a href="#"><span class="ico ico-1"></span><span>Google Play</span></a></div>
+        <div><a href="#"><span class="ico ico-2"></span><span>App Store</span></a></div>
       </div>
     </div>
 
@@ -51,6 +51,69 @@
       color: inherit;
     }
 
+    /* 라이브러리 */
+    .border-red {
+    border: 5px solid red;
+}
+
+.border-blue {
+    border: 5px solid blue;
+}
+
+.border-black {
+    border: 5px solid black;
+}
+
+.border-green {
+    border: 5px solid green;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-jc-c {
+    justify-content: center;
+}
+
+.flex-ai-c {
+    align-items: center;
+}
+
+.flex-as-c {
+    align-self: center;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.block {
+    display: block;
+}
+
+.height-100p {
+    height: 100%;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-box>img {
+    width: 100%;
+    display: block;
+}
+
+.ico {
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    display:block;
+    background-image: url(https://kakaobank.com/static/images/web/img_kabang_220615.png);
+  }
+
     /* 커스텀 */
     .con-min-width {
       min-width: 1080px;
@@ -63,39 +126,67 @@
     /* ------- main banner start ------- */
     .main_banner {
       background-color: #ffef6b;
-      padding:100px;
+      padding: 100px;
     }
-    .main_banner .text_box > h3{
+
+    .main_banner .text_box>h3 {
       font-size: 49px;
       font-weight: bold;
       line-height: 1.4;
     }
 
-    .main_banner .text_box > p{
+    .main_banner .text_box>p {
       font-size: 16px;
       line-height: 1.8;
       opacity: .7;
     }
-    .main_banner .text_box > .btns{
+
+    .main_banner .text_box>.btns {
       margin-top: 54px;
 
     }
-    .main_banner .text_box > .btns>div:first-child{
+
+    .main_banner .text_box>.btns>div:first-child {
       padding-right: 12px;
     }
-    .main_banner .text_box > .btns a{
-      display:block;
-      width : 178px;
-      height:56px;
-      border: 1px solid rgba(255,255,255,.3);
+
+    .main_banner .text_box>.btns a {
+      display: flex;
+      width: 178px;
+      height: 56px;
+      border: 1px solid rgba(255, 255, 255, .3);
       border-radius: 12px;
-      font-size:16.2px;
-      font-weight:bold;
-      line-height:56px;
-      color:#333;
-      background-color:#fff;
+      font-size: 16.2px;
+      font-weight: bold;
+      line-height: 56px;
+      color: #333;
+      background-color: #fff;
       text-align: center;
+      justify-content: center;
+      align-items: center;
     }
+
+    .main_banner .text_box>.btns a>.ico {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url(../imgs/imageye___-_img_kabang_220615.png);
+      margin-right: 10px;
+      margin-top:2px;
+    }
+
+    .main_banner .text_box>.btns:hover>a{
+      text-decoration: underline;
+    }
+
+    .main_banner .text_box>.btns a>.ico-1 {
+      background-position: -342px -292px;
+    }
+    
+    .main_banner .text_box>.btns a>.ico-2 {
+      background-position: -371px -292px;
+    }
+
     /* ------- main banner text start ------- */
 
     /* ------- main banner text end ------- */

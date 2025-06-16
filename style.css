@@ -51,3 +51,11 @@
     width: 100%;
     display: block;
 }
+
+.ico {
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    display:block;
+    background-image: url(https://kakaobank.com/static/images/web/img_kabang_220615.png);
+  }
