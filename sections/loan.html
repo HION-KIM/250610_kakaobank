@@ -22,7 +22,10 @@
   <div class="loan_box con-min-width active-on-visible" data-active-on-visible-diff-y="-500" data-active-on-visible-delay="400">
     <div class="sky">
       <div class="blue"></div>
-      <div class="moon"></div>
+      <div class="moon">
+        <div class="base"></div>
+        <div class="shadow"></div>
+      </div>
       <div class="stars"></div>
     </div>
     <div class="con">
@@ -161,6 +164,42 @@
     }
     .loan_box.active>.sky > .blue{
       height: 0;
+    }
+
+    .loan_box > .sky > .moon {
+      width: 112px;
+      height:112px;
+      /* border-radius: 50%; */
+      position:absolute;
+      left:calc(50% + 282px);
+      top:202px;
+  
+      overflow: hidden;
+    }
+    .loan_box > .sky > .moon > .base{
+      width: 110px;
+      height:110px;
+      border-radius: 50%;
+      background-color:#ffdc00;
+      transition : background-color .85s;
+    }
+
+    .loan_box.active > .sky > .moon > .base{
+      background-color:#fff;
+    }
+    .loan_box > .sky > .moon > .shadow{
+      width: 100%;
+      height:100%;
+      background-color:#333b58;
+      border-radius: 50%;
+      position: absolute;
+      top:-100%;
+      left:-100%;
+      transition:top .85s .2s, left .85s .2s;
+    }
+    .loan_box.active > .sky > .moon > .shadow{
+      top:-20%;
+      left:-20%;
     }
     /* ------- loan end ------- */
   </style>
