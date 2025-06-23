@@ -5,31 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>카카오뱅크 모작 메인배너</title>
- <!-- 제이쿼리 -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
- <!-- 로데쉬 -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-<!-- 폰트 -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap"  rel="stylesheet">
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 로데쉬 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <!-- 폰트 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet">
 
-<!-- 내부링크 -->
-<link rel="stylesheet" href="../style.css" />
-<script src="../script.js" defer></script>
+  <!-- 내부링크 -->
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
 </head>
 
 <body>
-  <div class="loan_box con-min-width active-on-visible" data-active-on-visible-diff-y="-500" data-active-on-visible-delay="400">
+  <div class="loan_box con-min-width active-on-visible" data-active-on-visible-diff-y="-500"
+    data-active-on-visible-delay="400">
     <div class="sky">
       <div class="blue"></div>
       <div class="moon">
         <div class="base"></div>
         <div class="shadow"></div>
       </div>
-      <div class="stars"></div>
+      <div class="stars">
+        <span class="ico-star ico-star-1"></span>
+        <span class="ico-star ico-star-2"></span>
+        <span class="ico-star ico-star-3"></span>
+        <span class="ico-star ico-star-4"></span>
+        <span class="ico-star ico-star-5"></span>
+        <span class="ico-star ico-star-6"></span>
+        <span class="ico-star ico-star-7"></span>
+      </div>
     </div>
     <div class="con">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, corporis ipsum dignissimos vel, rerum facilis vitae ex nostrum ratione, excepturi id similique doloribus at. Dignissimos quae earum consequuntur veniam veritatis?
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, corporis ipsum dignissimos vel, rerum facilis
+      vitae ex nostrum ratione, excepturi id similique doloribus at. Dignissimos quae earum consequuntur veniam
+      veritatis?
     </div>
 
   </div>
@@ -135,191 +147,295 @@
     }
 
     /* ------- loan start ------- */
-    .loan_box{
+    .loan_box {
       /* 임시 마진값 */
-      margin-top:1200px;
-      margin-bottom:1000px;
-      position:relative;
-      background-color:#333b58;
-      z-index:0;
+      margin-top: 1200px;
+      margin-bottom: 1000px;
+      position: relative;
+      background-color: #333b58;
+      z-index: 0;
       /* 임시 */
-      height:500px;
+      height: 500px;
     }
-    .loan_box>.sky{
-      position:absolute;
-      width:100%;
-      height:100%;
-      top:0;
-      left:0;
-      z-index:-1;
-    }
-    .loan_box>.sky > .blue{
+
+    .loan_box>.sky {
       position: absolute;
-      width:100%;
-      height:100%;
-      top:0;
-      left:0;
-      background-color:#599ced;
-      transition:height .85s;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
-    .loan_box.active>.sky > .blue{
+
+    .loan_box>.sky>.blue {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #599ced;
+      transition: height .85s;
+    }
+
+    .loan_box.active>.sky>.blue {
       height: 0;
     }
 
-    .loan_box > .sky > .moon {
+    .loan_box>.sky>.moon {
       width: 112px;
-      height:112px;
+      height: 112px;
       /* border-radius: 50%; */
-      position:absolute;
-      left:calc(50% + 282px);
-      top:202px;
-  
+      position: absolute;
+      left: calc(50% + 282px);
+      top: 202px;
+
       overflow: hidden;
     }
-    .loan_box > .sky > .moon > .base{
+
+    .loan_box>.sky>.moon>.base {
       width: 110px;
-      height:110px;
+      height: 110px;
       border-radius: 50%;
-      background-color:#ffdc00;
-      transition : background-color .85s;
+      background-color: #ffdc00;
+      transition: background-color .85s;
     }
 
-    .loan_box.active > .sky > .moon > .base{
-      background-color:#fff;
+    .loan_box.active>.sky>.moon>.base {
+      background-color: #fff;
     }
-    .loan_box > .sky > .moon > .shadow{
+
+    .loan_box>.sky>.moon>.shadow {
       width: 100%;
-      height:100%;
-      background-color:#333b58;
+      height: 100%;
+      background-color: #333b58;
       border-radius: 50%;
       position: absolute;
-      top:-100%;
-      left:-100%;
-      transition:top .85s .2s, left .85s .2s;
+      top: -100%;
+      left: -100%;
+      transition: top .85s .2s, left .85s .2s;
     }
-    .loan_box.active > .sky > .moon > .shadow{
-      top:-20%;
-      left:-20%;
+
+    .loan_box.active>.sky>.moon>.shadow {
+      top: -20%;
+      left: -20%;
     }
+
+    body {
+  margin:0;
+}
+
+.sky {
+  background-color:#333b58;
+  height:700px;
+}
+
+.sky .ico-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.loan_box.active .sky .ico-star {
+  background-color: #fff;
+}
+
+.sky .ico-star-1 {
+  top: 30%;
+  left: 10%;
+}
+
+.sky .ico-star-2 {
+  top: 10%;
+  left: 20%;
+}
+
+.sky .ico-star-3 {
+  top: 25%;
+  left: 15%;
+}
+
+.sky .ico-star-4 {
+  top: 40%;
+  right: 15%;
+}
+
+.sky .ico-star-5 {
+  top: 43%;
+  right: 30%;
+}
+
+.sky .ico-star-6 {
+  top: 73%;
+  right: 27%;
+}
+
+.sky .ico-star-7 {
+  top: 65%;
+  left: 22%;
+}
+
+@keyframes clittering {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.ico-star-1 {
+  animation: clittering 2s infinite;
+}
+
+.ico-star-2 {
+  animation: clittering 3s infinite;
+}
+
+.ico-star-3 {
+  animation: clittering 5s infinite;
+}
+
+.ico-star-4 {
+  animation: clittering 2s infinite;
+}
+
+.ico-star-5 {
+  animation: clittering 4s infinite;
+}
+
+.ico-star-6 {
+  animation: clittering 1.8s infinite;
+}
+
+.ico-star-7 {
+  animation: clittering 3.5s infinite;
+}
     /* ------- loan end ------- */
   </style>
 
   <script>
     function ActiveOnVisible__init() {
-  $('.active-on-visible').each(function (index, node) {
-    var $node = $(node);
+      $('.active-on-visible').each(function (index, node) {
+        var $node = $(node);
 
-    var onFuncName = $node.attr('data-active-on-visible-on-func-name');
-    var offFuncName = $node.attr('data-active-on-visible-off-func-name');
+        var onFuncName = $node.attr('data-active-on-visible-on-func-name');
+        var offFuncName = $node.attr('data-active-on-visible-off-func-name');
 
-    $node.data('data-active-on-visible-on-func-name', onFuncName);
-    $node.data('data-active-on-visible-off-func-name', offFuncName);
-  });
+        $node.data('data-active-on-visible-on-func-name', onFuncName);
+        $node.data('data-active-on-visible-off-func-name', offFuncName);
+      });
 
-  $(window).resize(_.debounce(ActiveOnVisible__initOffset, 500));
-  ActiveOnVisible__initOffset();
+      $(window).resize(_.debounce(ActiveOnVisible__initOffset, 500));
+      ActiveOnVisible__initOffset();
 
-  $(window).scroll(_.debounce(ActiveOnVisible__checkAndActive, 50));
-  ActiveOnVisible__checkAndActive();
-}
-
-function ActiveOnVisible__initOffset() {
-  var windowHeight = $(window).height();
-
-  $('.active-on-visible:not(.actived)').each(function (index, node) {
-    var $node = $(node);
-
-    var offsetTop = $node.offset().top;
-
-    var matrix = $node.css('transform').replace(/[^0-9\-.,]/g, '').split(',')
-    var translateX = matrix[12] || matrix[4];
-    var translateY = matrix[13] || matrix[5];
-
-    if (translateY) {
-      offsetTop -= translateY;
+      $(window).scroll(_.debounce(ActiveOnVisible__checkAndActive, 50));
+      ActiveOnVisible__checkAndActive();
     }
 
-    $node.attr('data-active-on-visible-offsetTop', offsetTop);
-    $node.data('data-active-on-visible-offsetTop', offsetTop);
+    function ActiveOnVisible__initOffset() {
+      var windowHeight = $(window).height();
 
-    if (!$node.attr('data-active-on-visible-diff-y')) {
-      $node.attr('data-active-on-visible-diff-y', '0');
+      $('.active-on-visible:not(.actived)').each(function (index, node) {
+        var $node = $(node);
+
+        var offsetTop = $node.offset().top;
+
+        var matrix = $node.css('transform').replace(/[^0-9\-.,]/g, '').split(',')
+        var translateX = matrix[12] || matrix[4];
+        var translateY = matrix[13] || matrix[5];
+
+        if (translateY) {
+          offsetTop -= translateY;
+        }
+
+        $node.attr('data-active-on-visible-offsetTop', offsetTop);
+        $node.data('data-active-on-visible-offsetTop', offsetTop);
+
+        if (!$node.attr('data-active-on-visible-diff-y')) {
+          $node.attr('data-active-on-visible-diff-y', '0');
+        }
+
+        if (!$node.attr('data-active-on-visible-delay')) {
+          $node.attr('data-active-on-visible-delay', '0');
+        }
+
+        var diffY = $node.attr('data-active-on-visible-diff-y');
+        var delay = $node.attr('data-active-on-visible-delay');
+
+        if (diffY.substr(-2, 2) == 'vh') {
+          diffY = parseInt(diffY);
+
+          diffY = windowHeight * (diffY / 100);
+        }
+        else if (diffY.substr(-1, 1) == '%') {
+          diffY = parseInt(diffY);
+
+          diffY = $node.height() * (diffY / 100);
+        }
+        else {
+          diffY = parseInt(diffY);
+        }
+
+        $node.attr('data-active-on-visible-diff-y-real', diffY);
+        $node.data('data-active-on-visible-diff-y', diffY);
+        $node.data('data-active-on-visible-delay', delay);
+      });
+
+      ActiveOnVisible__checkAndActive();
     }
 
-    if (!$node.attr('data-active-on-visible-delay')) {
-      $node.attr('data-active-on-visible-delay', '0');
-    }
+    function ActiveOnVisible__checkAndActive() {
+      $('.active-on-visible:not(.actived)').each(function (index, node) {
+        var $node = $(node);
 
-    var diffY = $node.attr('data-active-on-visible-diff-y');
-    var delay = $node.attr('data-active-on-visible-delay');
+        var offsetTop = $node.data('data-active-on-visible-offsetTop') * 1;
+        var diffY = parseInt($node.data('data-active-on-visible-diff-y'));
+        var delay = parseInt($node.data('data-active-on-visible-delay'));
 
-    if (diffY.substr(-2, 2) == 'vh') {
-      diffY = parseInt(diffY);
+        var onFuncName = $node.data('data-active-on-visible-on-func-name');
+        var offFuncName = $node.data('data-active-on-visible-off-func-name');
 
-      diffY = windowHeight * (diffY / 100);
-    }
-    else if (diffY.substr(-1, 1) == '%') {
-      diffY = parseInt(diffY);
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var nodeHeight = $node.height();
 
-      diffY = $node.height() * (diffY / 100);
-    }
-    else {
-      diffY = parseInt(diffY);
-    }
+        if (scrollTop + windowHeight + diffY > offsetTop) {
+          setTimeout(function () {
+            if ($node.hasClass('active') == false) {
+              $node.addClass('active');
 
-    $node.attr('data-active-on-visible-diff-y-real', diffY);
-    $node.data('data-active-on-visible-diff-y', diffY);
-    $node.data('data-active-on-visible-delay', delay);
-  });
+              if ($node.hasClass('can-active-once')) {
+                $node.addClass('actived');
+              }
 
-  ActiveOnVisible__checkAndActive();
-}
+              if (window[onFuncName]) {
+                window[onFuncName]($node);
+              }
+            }
+          }, delay);
+        }
+        else {
+          if ($node.hasClass('active')) {
+            $node.removeClass('active');
 
-function ActiveOnVisible__checkAndActive() {
-  $('.active-on-visible:not(.actived)').each(function (index, node) {
-    var $node = $(node);
-
-    var offsetTop = $node.data('data-active-on-visible-offsetTop') * 1;
-    var diffY = parseInt($node.data('data-active-on-visible-diff-y'));
-    var delay = parseInt($node.data('data-active-on-visible-delay'));
-
-    var onFuncName = $node.data('data-active-on-visible-on-func-name');
-    var offFuncName = $node.data('data-active-on-visible-off-func-name');
-
-    var scrollTop = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    var nodeHeight = $node.height();
-
-    if (scrollTop + windowHeight + diffY > offsetTop) {
-      setTimeout(function () {
-        if ($node.hasClass('active') == false) {
-          $node.addClass('active');
-
-          if ($node.hasClass('can-active-once')) {
-            $node.addClass('actived');
-          }
-
-          if (window[onFuncName]) {
-            window[onFuncName]($node);
+            if (window[offFuncName]) {
+              window[offFuncName]($node);
+            }
           }
         }
-      }, delay);
+      });
     }
-    else {
-      if ($node.hasClass('active')) {
-        $node.removeClass('active');
 
-        if (window[offFuncName]) {
-          window[offFuncName]($node);
-        }
-      }
-    }
-  });
-}
-
-$(function () {
-  ActiveOnVisible__init();
-})
+    $(function () {
+      ActiveOnVisible__init();
+    })
   </script>
 </body>
 
