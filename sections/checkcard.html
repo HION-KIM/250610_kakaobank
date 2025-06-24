@@ -32,6 +32,17 @@
           <img src="../imgs/imageye___-_home_arr.png" alt="">
         </a>
       </div>
+      <div class="slider_box">
+        <div class="arrows">
+          <div><img src="../imgs/" alt=""></div>
+          <div><img src="" alt=""></div>
+        </div>
+        <div class="slides">
+          <div><img src="../imgs/imageye___-_card-1.png" alt=""></div>
+          <div class="center"><img src="../imgs/imageye___-_card-2.png" alt=""></div>
+          <div><img src="../imgs/imageye___-_card-3.png" alt=""></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -170,6 +181,42 @@
       margin:3px 0 0 8px;
       display:block;
     }
+
+    .checkcard_box .slider_box{
+      position: relative;
+    }
+    .checkcard_box .slider_box .slides{
+      display:flex;
+      justify-content: center;
+    }
+    .checkcard_box .slider_box .slides > div>img{
+      width: 240px;
+      display:block;
+    }
+    .checkcard_box .slider_box .slides > div.center{
+      margin-left: -80px;
+      margin-right: -80px;
+      position:relative;
+      z-index: 1;
+    }
+    .checkcard_box .slider_box .slides > div.center>img{
+      transform:scale(1.2);
+    }
+
+    .checkcard_box .slider_box .arrows div{
+      position: absolute;
+      top:50%;
+      transform:translate(-50%);
+      cursor:pointer;
+    }
+    .checkcard_box .slider_box .arrows div:last-child{
+      left:auto;
+      right:30px;
+    }
+    .checkcard_box .slider_box .arrows div.active{
+      transform:translateY(-45%);
+    }
+
   </style>
 
 
