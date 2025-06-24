@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 로데쉬 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <!-- 폰트 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 내부링크 -->
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
+
+</head>
+
+<body>
+  <div class="con-min-width checkcard_box">
+    <div class="con">
+      <h3>카카오 프렌즈,<br>내가 고르는 선택의 즐거움</h3>
+      <p>프렌즈 디자인부터 멋스러운 블랙 컬러 카드까지 원하는 디자인과 기능을 선택할 수 있습니다.</p>
+
+      <div class="btn_box">
+        <a href="#">
+          카카오뱅크 프렌즈 체크카드
+          <img src="../imgs/imageye___-_home_arr.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    /* 폰트 */
+    html {
+      /* 영문이면 roboto가 적용되고, 한글이면 Noto Sans KR가 적용되도록 아래와 같은 순서로 배치 */
+      font-family: "Roboto", "Noto Sans KR", sans-serif;
+    }
+
+    /* 노멀라이즈 */
+    body,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 라이브러리 */
+    .border-red {
+      border: 5px solid red;
+    }
+
+    .border-blue {
+      border: 5px solid blue;
+    }
+
+    .border-black {
+      border: 5px solid black;
+    }
+
+    .border-green {
+      border: 5px solid green;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-jc-c {
+      justify-content: center;
+    }
+
+    .flex-ai-c {
+      align-items: center;
+    }
+
+    .flex-as-c {
+      align-self: center;
+    }
+
+    .flex-grow-1 {
+      flex-grow: 1;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .height-100p {
+      height: 100%;
+    }
+
+    .con {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .img-box>img {
+      width: 100%;
+      display: block;
+    }
+
+    .ico {
+      background-color: white;
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-image: url(https://kakaobank.com/static/images/web/img_kabang_220615.png);
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    /* 라이브러리끝 */
+
+    /* 커스텀 */
+    /* 체크카드 시작 */
+    .checkcard_box {
+      padding-top: 150px
+    }
+
+    .checkcard_box h3 {
+      font-size: 40px;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .checkcard_box p {
+      font-size: 15px;
+      margin-top: 24px;
+      line-height: 1.7;
+      color: #666;
+      text-align: center;
+    }
+
+    .checkcard_box .btn_box{
+      display:flex;
+      justify-content: center;
+    }
+    .checkcard_box .btn_box a{
+      background-color:#f6f6f6;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:56px;
+      width:258px;
+      color:#333;
+      border-radius:10px;
+    }
+    .checkcard_box .btn_box a:hover{
+      text-decoration: underline;
+    }
+
+    .checkcard_box .btn_box a img{
+      width: 6px;
+      height:9px;
+      margin:3px 0 0 8px;
+      display:block;
+    }
+  </style>
+
+
+
+</body>
+
+</html>
