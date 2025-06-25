@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- 제이쿼리 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- 슬릭 슬라이더 불러오기 -->
-  <!-- 무조건 제이쿼리 밑에다 놔야함 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <!-- 로데쉬 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
   <!-- 폰트 -->
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap"
@@ -207,33 +206,33 @@
     .checkcard_box .slider_box {
       position: relative;
       width: 660px;
-      margin: 80px auto;
+      margin: 80px auto 0 auto;
     }
 
-    .checkcard_box .slider_box .slick>.item>div {
-
+    .checkcard_box .slider_box .slick .item>.img-box {
       padding-top: 30px;
       padding-bottom: 30px;
     }
 
-    .checkcard_box .slider_box .slick>div.center>img {
+    .checkcard_box .slider_box .slick .item.slick-center {
       transform: scale(1.17);
     }
 
     .checkcard_box .slider_box .arrows div {
       position: absolute;
       top: 50%;
-      left: 30px;
+      right:calc(100% + 150px);
       transform: translate(-50%);
       cursor: pointer;
     }
 
     .checkcard_box .slider_box .arrows div:last-child {
-      left: auto;
-      right: 30px;
+      left: calc(100% + 150px);
+      right: auto;
     }
 
     .checkcard_box .slider_box .arrows div.active {
+
       transform: translateY(-45%);
     }
   </style>
@@ -247,9 +246,9 @@
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: 0,
-        arrows: true
-        prevArrow: ".slider_box > .arros > btn_arrow_left",
-        nextArrow: ".slider_box > .arros > btn_arrow_right",
+        arrows: true,
+        prevArrow: ".slider_box > .arrows > .btn_arrow_left",
+        nextArrow: ".slider_box > .arrows > .btn_arrow_right",
       });
     }
 
