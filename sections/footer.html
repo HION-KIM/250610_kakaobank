@@ -19,7 +19,7 @@
                         <li><a href="#">카카오뱅크 인증서 서비스 이용약관</a></li>
                         <li><a href="#"><strong>개인정보처리방침</strong></a></li>
                         <li><a href="#">신용정보활용체제</a></li>
-                        <li><a href="#">전자서명인증업무준칙</a></li>
+                        <li class="bar"><a href="#">전자서명인증업무준칙</a></li>
                         <br>
                         <li class="pd"><a href="#"><strong>전자민원접수</strong></a></li>
                         <li><a href="#">보호금융상품등록부</a></li>
@@ -36,10 +36,44 @@
                 <span class="txt_tel">(해외 +82-2-6420-3333)</span>
                 <div class="info_copyright">Copyright © KakaoBank Corp. All rights reserved.</div>
             </div>
+
+            <div class="box_3 flex flex-ai-c">
+                <div class="license_01">
+                    <a href="#" class="flex flex-ai-c">
+                        <img src="../imgs/imageye___-_webaccessibility.png" alt="">
+                        <span>웹 접근성 품질인증</span>
+                    </a>
+                </div>
+
+                <div class="license_02">
+                    <a href="#" class="flex flex-ai-c">
+                        <img src="../imgs/imageye___-_web_trust_seal.png" alt="">
+                        <span>웹 트러스트 인증</span>
+                    </a>
+                </div>
+                <div class="flex-grow-1"></div>
+
+                <nav class="menu_box_2">
+                    <ul class="flex">
+                        <li><a href="#"><span class="block ico_sns ico_sns_facebook"></span></a></li>
+                        <li><a href="#"><span class="block ico_sns ico_sns_instargram"></span></a></li>
+                        <li><a href="#"><span class="block ico_sns ico_sns_youtube"></span></a></li>
+                        <li><a href="#"><span class="block ico_sns ico_sns_brunch"></span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </footer>
 
     <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'koPubWorld_Dotum', 'sans-serif';
+            src: url('../KoPubWorld_ttf/KoPubWorld_Dotum_Medium.ttf') format('ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /* 노말라이즈 */
         body,
         ul,
@@ -133,6 +167,7 @@
         /* 푸터 시작 */
         footer {
             background-color: #eee;
+            font-family: 'koPubWorld_Dotum', 'sans-serif';
         }
 
         footer .box_1 {
@@ -147,7 +182,7 @@
             position: relative;
         }
 
-        footer .box_1>.menu_box>ul>li:not(:first-child)::after {
+        footer .box_1>.menu_box>ul>li:not(:first-child)::after{
             content: "";
             background-color: #d8d8d8;
             width: 1px;
@@ -157,7 +192,6 @@
             left: -1px;
             transform: translateY(-50%);
         }
-        
 
         footer .box_1>.menu_box>ul>li:first-child {
             padding-left: 0;
@@ -167,22 +201,89 @@
             margin-left: 15px;
         }
 
-        footer .box_1>.menu_box>ul>li > strong{
+        footer .box_1>.menu_box>ul>li>strong {
             color: #000;
         }
-        footer .box_2{
-            color:#888;
-            font-size:12px;
+
+        footer .box_2 {
+            color: #888;
+            font-size: 12px;
         }
 
-        footer .box_2 .txt_busi_tel{
-            color:#000;
-            padding:0 6px;
+        footer .box_2 .txt_busi_tel {
+            color: #000;
+            padding: 0 6px;
 
         }
-        footer .box_2 .info_copyright{
-            margin-top:6px;
-            font-size:11px;
+
+        footer .box_2 .info_copyright {
+            margin-top: 6px;
+            font-size: 11px;
+        }
+
+        footer .box_3 {
+            color: #666;
+            padding: 12px 0 18px;
+        }
+
+        footer .box_3 .license_01 img {
+            width: 46px;
+        }
+
+        footer .box_3 .license_02 img {
+            width: 42px;
+        }
+
+        footer .box_3 .license_01 span,
+        footer .box_3 .license_02 span {
+            font-size: 13px;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+
+        footer .box_3 .license_02 {
+            margin-left: 20px;
+        }
+
+        footer .box_3 .menu_box_2 ul{
+            margin-right: 115px;
+        }
+        footer .box_3 .menu_box_2 ul li{
+            margin-left: 4px;
+        }
+        footer .box_3 .menu_box_2 ul>li:nth-child(2){
+            margin-right:8px;
+        }
+        footer .box_3 .menu_box_2 ul>li:nth-child(3){
+            margin-right:6px;
+        }
+
+        footer .box_3 .menu_box_2 ul>li>a {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        footer .box_3 .menu_box_2 .ico_sns {
+            background: url(../imgs/imageye___-_ico_sns.png);
+            height: 100%;
+
+        }
+
+        footer .box_3 .menu_box_2 .ico_sns_facebook {
+            background-position: 0 -90px;
+        }
+
+        footer .box_3 .menu_box_2 .ico_sns_instargram {
+            background-position: -191px -138px;
+        }
+
+        footer .box_3 .menu_box_2 .ico_sns_youtube {
+            background-position: -90px -90px;
+        }
+
+        footer .box_3 .menu_box_2 .ico_sns_brunch {
+            background-position: -217px -138px;
         }
 
         /* 푸터 끝 */
