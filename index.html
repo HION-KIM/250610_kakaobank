@@ -701,7 +701,15 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
-
+    header .logo_wrap.active{
+      visibility : visible;
+      opacity: 1;
+      transition: all .3s;
+    }
+    header .logo_wrap.is_scroll{
+      visibility: hidden;
+      opacity: 0;
+    }
     header .logo_wrap>a {
       width: 116px;
     }
@@ -1407,7 +1415,10 @@
     /* ------- loan end ------- */
     /* 체크카드 시작 */
     .checkcard_box {
-      padding-top: 150px
+      padding-top: 150px;
+      /* padding:;
+      heigth:
+      border-box: */
     }
 
     .checkcard_box h3 {
@@ -1489,7 +1500,7 @@
     .itskill_box {
       background-color: #f9f9f9;
       padding-top: 160px;
-      padding-bottom: 230px;
+      padding-bottom: 106px;
     }
 
     .itskill_box h3 {
@@ -1673,6 +1684,20 @@
   </style>
   <script>
     // header script
+    function logoShowAndHide(){
+      $(window).scroll(function(){
+        let $this = $(this);
+        let scTop = $this.scrollTop();
+
+        if(scTop > 0){
+          $(".logo_wrap").addClass('active');
+        }else{
+          $(".logo_wrap").removeClass('active');
+        }
+      })
+    }
+    logoShowAndHide();
+
     $('.dropBtn').click(function () {
       $('.dropdown_content').toggleClass('is_active');
       $('.dropBtn').toggleClass('is_active');
